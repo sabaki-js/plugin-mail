@@ -7,8 +7,9 @@ const weights = weightsData as ModelWeights;
 const PRIMARY = "bucket";
 
 function classify(input: SabakiInput): ClassifyOutput {
+  const q = input.question && weights.questions[input.question] ? input.question : PRIMARY;
   const from = typeof input.from === "string" ? (input.from as string) : "";
-  const r = predict(`${from} ${input.state}`, weights, PRIMARY);
+  const r = predict(`${from} ${input.state}`, weights, q);
   return { decision: r.decision, confidence: r.confidence, domain: manifest.domain };
 }
 
