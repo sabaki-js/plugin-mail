@@ -1,40 +1,27 @@
+<img src="https://raw.githubusercontent.com/sabaki-js/sabaki/main/assets/logo.svg" width="120" alt="sabaki logo" />
+
 # @sabaki-js/mail
 
-Email triage: bucket (8 classes: social/promotions/updates/forums/personal/services/accounts/spam) and phishing suspicion.
+[![npm](https://img.shields.io/npm/v/%40sabaki-js%2Fmail)](https://www.npmjs.com/package/%40sabaki-js%2Fmail) [![license](https://img.shields.io/npm/l/%40sabaki-js%2Fmail)](https://github.com/sabaki-js/plugin-mail#readme) [![CI](https://github.com/sabaki-js/plugin-mail/actions/workflows/test-battery.yml/badge.svg)](https://github.com/sabaki-js/plugin-mail/actions)
 
-A [sabaki](https://github.com/sabaki-js/sabaki) plugin. Router keywords included:
-register it and `Sabaki.decide()` routes matching states here automatically.
+Email triage (8 buckets + phishing suspicion).
 
-## Install
-
-```sh
-npm install @sabaki-js/mail sabaki
-```
-
-Zero runtime dependencies (bundled TF-IDF weights, 121 Ko).
+Questions: `bucket` (0.889 test / 0.769 end-to-end), `suspicious` (experimental). Anonymized weights, 655 KB. Pass `from` in the input.
 
 ## Usage
 
 ```ts
 import { Sabaki } from "sabaki";
-import mail from "@sabaki-js/mail";
+import plugin from "@sabaki-js/mail";
 
-const sabaki = new Sabaki();
-sabaki.register(mail.default ?? mail);
-const r = sabaki.decide({ state: "N'oubliez pas de terminer Lupin", from: "Netflix <info@members.netflix.com>" });
-// { domain: "mail", decision: "promotions", confidence: 0.71, plugin: "@sabaki-js/mail" }
+const sabaki = new Sabaki().register(plugin.default ?? plugin);
+const r = sabaki.decide({ state: "..." });
+// { domain: "mail", decision: ..., confidence: ..., plugin: "@sabaki-js/mail" }
 ```
 
-Ask another question with `input.question` (any of the list below).
-Note: pass `from` in the input (sender is part of the features).
+Ask another question with `input.question`.
 
-## Questions (measured on held-out test sets)
-
-- `bucket` — accuracy **0.889** (test, n=1367) / **0.769** end-to-end incl. routing (4 126 mails, Takeout corpus)
-- `suspicious` — experimental (13 samples, train recall 1.0, 6 false alarms)
-
-Accuracies are honest test-split numbers, not marketing. See `sabaki` for the
-`nano` / `mini` modes and the benchmark methodology.
+Part of [sabaki](https://github.com/sabaki-js/sabaki) — see the [GUIDE](https://github.com/sabaki-js/sabaki/blob/main/GUIDE.md).
 
 ## License
 
