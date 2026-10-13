@@ -32,7 +32,6 @@ Note: pass `from` in the input (sender is part of the features).
 
 - `bucket` — accuracy **0.889** (test, n=1367) / **0.769** end-to-end incl. routing (4 126 mails, Takeout corpus)
 - `suspicious` — experimental (13 samples, train recall 1.0, 6 false alarms)
-- `suspicious` — experimental, 3 phishing samples (true/false)
 
 Accuracies are honest test-split numbers, not marketing. See `sabaki` for the
 `nano` / `mini` modes and the benchmark methodology.
