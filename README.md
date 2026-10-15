@@ -6,7 +6,7 @@
 
 Email triage (8 buckets + phishing suspicion).
 
-Questions: `bucket` (0.889 test / 0.769 end-to-end), `suspicious` (experimental). Anonymized weights, 655 KB. Pass `from` in the input.
+Questions: `bucket` (nano 0.889 test / 0.769 end-to-end ; mini v0.5.0), `suspicious` (experimental). Anonymized weights, 655 KB nano / 22 MB mini int8. Pass `from` in the input (`joinFrom` on both modes).
 
 ## Usage
 
