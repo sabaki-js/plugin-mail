@@ -21,7 +21,7 @@ const r = sabaki.decide({ state: "..." });
 
 Ask another question with `input.question`.
 
-Part of [sabaki](https://github.com/sabaki-js/sabaki) — see the [GUIDE](https://github.com/sabaki-js/sabaki/blob/main/GUIDE.md).
+Part of [sabaki](https://github.com/sabaki-js/sabaki) - see the [GUIDE](https://github.com/sabaki-js/sabaki/blob/main/GUIDE.md).
 
 ## License
 

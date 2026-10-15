@@ -1,5 +1,5 @@
 /**
- * @sabaki-js/mail — sabaki plugin for the `mail` domain.
+ * @sabaki-js/mail - sabaki plugin for the `mail` domain.
  *
  * Bundled `nano` mode (TF-IDF weights, <1 ms, zero dependencies).
  * Ask another question with `input.question` (see `manifest.questions`).
