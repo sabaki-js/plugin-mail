@@ -2,7 +2,7 @@
   "name": "@sabaki-js/mail",
   "version": "1.1.1",
   "license": "MIT",
-  "description": "Sabaki plugin — tri des mails (bucket : social/promotions/updates/forums/personal).",
+  "description": "Sabaki plugin - tri des mails (bucket : social/promotions/updates/forums/personal).",
   "repository": {
     "type": "git",
     "url": "https://github.com/sabaki-js/plugin-mail"
