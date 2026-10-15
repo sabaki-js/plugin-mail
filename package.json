@@ -1,6 +1,6 @@
 {
 	"name": "@sabaki-js/mail",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"license": "MIT",
 	"description": "Sabaki plugin \u2014 tri des mails (bucket : social/promotions/updates/forums/personal).",
 	"repository": {
