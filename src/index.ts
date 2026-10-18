@@ -35,3 +35,14 @@ function classify(input: SabakiInput): ClassifyOutput {
 
 const plugin: SabakiPlugin = { manifest, classify };
 export default plugin;
+
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+/** Dossier des poids mini embarques (aucun telechargement requis). */
+export const modelDir = path.join(
+	path.dirname(fileURLToPath(import.meta.url)),
+	"..",
+	"models",
+	"mail-int8",
+);

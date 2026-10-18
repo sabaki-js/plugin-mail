@@ -1,0 +1,17 @@
+{
+ "questions": [
+  "bucket"
+ ],
+ "classes": {
+  "bucket": [
+   "accounts",
+   "forums",
+   "personal",
+   "promotions",
+   "services",
+   "social",
+   "spam",
+   "updates"
+  ]
+ }
+}
